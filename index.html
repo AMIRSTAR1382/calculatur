@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="input-section">
+            <h1>mortgage calculator</h1>
+                <label for="amount">loan Amount: </label>
+                    <input type="number" id="amount" placeholder="$300,000" />
+                <label for="term">mortgage term (year)</label>
+                    <input type="number" id="term" placeholder="25" />
+                <label for="interest">interest rate (%): </label>
+                    <input type="number" id="interest" placeholder="5.25" />
+                    <div>
+                        <label>
+                            <input type="radio" name="mortgageType" value="repayment" checked>
+                            Repayment
+                        </label>
+                        <label>
+                            <input type="radio" name="mortgageType" value="interest-only">
+                            interest only
+                        </label>
+                    </div>
+                <button onclick="calculate()">
+                    calculate payment
+                </button>
+        </div>
+        <div class="result-section" id="result">
+            <h2>your result</h2>
+                    <p>monthly payment: <span id="monthly-payment"></span></p>
+                    <p>monthly payment over term: <span id="total-payment"></span></p>
+        </div>
+    </div>
+
+    <script>
+        function calculate() {
+                const amount = parseFloat(document.getElementById('amount').value);
+                const term = parseFloat(document.getElementById('term').value);
+                const interest = parseFloat(document.getElementById('interest').value) / 100 / 12;
+
+                const mortgageType = document.querySelector('input[name="mortgageType"]:checked').value;
+
+                    let monthlypayment,totalpayment;
+
+                    if (mortgageType === 'repayment') { monthlypayment = (amount * interestrate) / (1 - math.pow(1 + interestrate, -term * 12));
+                        totalpayment = monthlypayment * term * 12;
+                    } else if (mortgageType === 'interest-only') {
+                        monthlypayment = amount * interestrate;
+                        totalpayment = monthlypayment * term * 12;
+                    }
+
+                document.getElementById('monthly-payment').innerText = '₤${monthlypayment.toFixed(2)}';
+                document.getElementById('total-payment').innerText = '₤${totalpayment.toFixed(2)}';
+                document.getElementById('result').style.display = 'block';
+            }
+    </script>
+</body>
+</html>
