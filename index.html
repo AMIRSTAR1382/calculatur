@@ -10,22 +10,24 @@
         <div class="container">
             <div class="input-section">
                 <h1>Mortgage Calculator</h1>
-                <label for="amount">Mortgage Amount: </label>
-                    <input type="number" id="amount" placeholder="$300,000" />
-                <label for="term">Mortgage Term (Years):</label>
-                    <input type="number" id="term" placeholder="25" />
-                <label for="interest">Interest Rate (%): </label>
-                    <input type="number" id="interest" placeholder="5.25" />
-                <div>
-                    <label>
-                        <input type="radio" name="mortgageType" value="repayment" checked>
-                        Repayment
-                    </label>
-                    <label>
-                        <input type="radio" name="mortgageType" value="interest-only">
-                        Interest Only
-                    </label>
+                    <label for="amount">Mortgage Amount: </label>
+                        <input id="amount" placeholder="$300,000" />
+                <div class="input-container">
+                    <div class="input-group">
+                        <label for="term">Mortgage Term (Years):</label>
+                            <input id="term" placeholder="25" />
+                    </div>
+                    <div class="input-group">
+                        <label for="interest">Interest Rate (%): </label>
+                            <input id="interest" placeholder="5.25" />
+                    </div>
                 </div>
+                    <div class="radio-group">
+                        <label><input type="radio" name="PaymentType" value="repayment">Repayment</label>
+                    </div>
+                    <div class="radio-group">
+                        <label><input type="radio" name="PaymentType" value="interestOnly">interest Only</label>
+                    </div>
                 <div class="button-container">
                     <button onclick="calculate()">Calculate Payment</button>
                     <button class="clear-button" onclick="clearALL()">Clear ALL</button>
@@ -35,8 +37,8 @@
                 <img src="https://img.icons8.com/?size=100&id=9viuvNq2CgPw&format=png&color=000000" alt="png">
                 <h2>Your Result</h2>
                 <p class="result-message">Complete the form and click "Calculate Payment" to see your results.</p>
-                <p>Monthly Payment: <span class="highlight" id="monthly-payment">₤0.00</span></p>
-                <p>Total Payment Over Term: <span class="highlight" id="total-payment">₤0.00</span></p>
+                <p>Monthly Payment: <span class="highlight" id="monthly-payment">$0.00</span></p>
+                <p>Total Payment Over Term: <span class="highlight" id="total-payment">$0.00</span></p>
             </div>
         </div>
     <script src="/script/script.js"></script>

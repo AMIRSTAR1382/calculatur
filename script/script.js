@@ -20,19 +20,19 @@ function calculate() {
                 totalPayment = monthlyPayment * term * 12;
             }
 
-            document.getElementById('monthly-payment').innerText = '₤' + monthlyPayment.toFixed(2);
-            document.getElementById('total-payment').innerText = '₤' + totalPayment.toFixed(2);
+            document.getElementById('monthly-payment').innerText = '$' + monthlyPayment.toFixed(2);
+            document.getElementById('total-payment').innerText = '$' + totalPayment.toFixed(2);
         }
 
         function clearALL() {
             document.getElementById('amount').value = '';
             document.getElementById('term').value = '';
             document.getElementById('interest').value = '';
-            document.getElementById('monthly-payment').innerText = '₤0.00';
-            document.getElementById('total-payment').innerText = '₤0.00';
+            document.getElementById('monthly-payment').innerText = '$0';
+            document.getElementById('total-payment').innerText = '$0';
         }
 
         window.onload = function () {
-            document.getElementById('monthly-payment').innerText = '₤0.00';
-            document.getElementById('total-payment').innerText = '₤0.00';
+            document.getElementById('monthly-payment').innerText = '$0';
+            document.getElementById('total-payment').innerText = '$0';
         }
