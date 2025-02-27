@@ -11,7 +11,7 @@
 
         .input-container {
             display: flex;
-            gap: 25px;
+            gap: 36px;
         }
 
         .input-group {
@@ -46,13 +46,13 @@
         label {
             display: block;
             margin: 10px 0 5px;
-            font-weight: bold;
+            font-weight: 500;
         }
 
         input {
             width: calc(100% - 20px);
             padding: 10px;
-            border: 1px solid #ccc;
+            border: 1px solid #476349;
             border-radius: 4px;
             margin-bottom: 10px;
             font-size: 14px;
@@ -119,5 +119,22 @@
         }
 
         .radio-group {
+            display: flex;
+            align-items: center;
             margin-bottom: 10px;
+            font-size: 15px;
+            border: 1px solid #476349;
+            border-radius: 5px;
+        }
+
+        .radio-group input[type="radio"] {
+            margin-left: 10px;
+            width: 15px;
+            height: 15px;
+        }
+
+        h4 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: 500;
         }

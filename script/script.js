@@ -3,7 +3,12 @@ function calculate() {
             const term = parseFloat(document.getElementById('term').value);
             const interest = parseFloat(document.getElementById('interest').value) / 100 / 12;
 
-            const mortgageType = document.querySelector('input[name="mortgageType"]:checked').value;
+            const mortgageType = document.querySelector('input[name="mortgageType"]:checked');
+
+            if (!mortgageType) {
+                alert('Please select a mortgage type.');
+                return;
+            }
 
             let monthlyPayment, totalPayment;
 
