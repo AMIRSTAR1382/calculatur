@@ -3,7 +3,7 @@ function calculate() {
     const term = parseFloat(document.getElementById('term').value);
     const interest = parseFloat(document.getElementById('interest').value) / 100 / 12;
 
-    const mortgageType = document.querySelector('input[name="mortgageType"]:checked');
+    const mortgageType = document.querySelector('input[name="PaymentType"]:checked');
 
     // Check if any input fields are empty
     if (isNaN(amount) || isNaN(term) || isNaN(interest) || amount <= 0 || term <= 0 || interest < 0) {
@@ -12,7 +12,7 @@ function calculate() {
     }
     
     // Check if mortgage type is selected
-    if (!mortgageType) {
+    if (!mortgageType.value) {
         alert('Please select a mortgage type.');
         return;
     }
@@ -20,12 +20,19 @@ function calculate() {
     let monthlyPayment, totalPayment;
 
     // Calculate based on the selected mortgage type
-    if (mortgageType.value === 'Repayment') {
+    if (mortgageType.value == 'repayment') {
+        console.log(1);
         monthlyPayment = (amount * interest) / (1 - Math.pow(1 + interest, -term * 12));
         totalPayment = monthlyPayment * term * 12;
-    } else if (mortgageType.value === 'interest-only') {
+    } else if (mortgageType.value === 'interestOnly') {
+        console.log(2);
         monthlyPayment = amount * interest;
         totalPayment = monthlyPayment * term * 12;
+    }
+    else{
+        console.log(3);
+        console.log(mortgageType.value);
+
     }
 
     // Display the results
