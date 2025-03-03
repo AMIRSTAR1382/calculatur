@@ -138,3 +138,35 @@
             margin-bottom: 10px;
             font-weight: 500;
         }
+
+                *{
+                    box-sizing: border-box;
+                }
+        
+                .result-section {
+                    display: flex;
+                    flex-wrap: wrap;
+                    font-size: 30px;
+                    text-align: center;
+                }
+        
+                .highlight {
+                    background-color: #f1f1f1;
+                    padding: 10px;
+                    flex: 50%;
+                }
+        
+                .highlight {
+                    background-color: dodgerblue;
+                    padding: 10px;
+                    flex: 50%;
+                }
+        
+                /* Responsive layout - makes a one column-layout instead of a two-column layout */
+                @media (max-width: 800px) {
+        
+                    .highlight,
+                    .highlight {
+                        flex: 100%;
+                    }
+                }
