@@ -160,7 +160,7 @@ h4 {
             /* Center horizontally and add margin */
             position: relative;
             /* Keep position relative for alignment */
-            top: -20px;
+            /* top: -20px; */
             /* Adjust to align with the input section */
         }
 
